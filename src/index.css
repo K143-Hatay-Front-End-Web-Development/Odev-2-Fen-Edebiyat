@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #F3B18C;
+  font-family: 'Finger Paint', cursive;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  top: 158px;
+  bottom: 545px;
+  left: 555px;
+  right: 557px;
+}
+
+h1 {
+  color: blue;
 }
