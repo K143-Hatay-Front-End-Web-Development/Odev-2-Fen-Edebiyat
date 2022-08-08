@@ -3,7 +3,7 @@ import logo from './logo.svg';
 function App() {
   return (
     <div className="App">
-      <div className='title'>Game Time</div>
+      <div className='title'>GAME TIME</div>
       <div className='Board'>
     
         <div className='game--container'>
