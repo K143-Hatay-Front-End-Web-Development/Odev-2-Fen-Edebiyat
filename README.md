@@ -1,8 +1,9 @@
 # Odev-2
 
 ## Grup Üyeleri
-- [Ad] [Soyad]
-- [Ad] [Soyad]
+- Ayşen Aydın
+- Erdinç Akdoğan
+- Sercan Ateş
 
 ## İçerik
 
