@@ -29,6 +29,10 @@ body {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-gap: 30px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
 }
 
 .cell {
@@ -42,19 +46,19 @@ body {
 
 /*
 
-Notlar: margin: 4 kenardan bosluk birakir. ,Marginin 3 kullanimi var 
+Notlar: margin: 4 kenardan bosluk birakir.kullanimlari:
 margin:0 (4 kenardan bosluk kalmaz)
-1)margin:10px auto ***yukari asagi-- sagdan soldan 
-2)margin:7px 5px 8px 9px (saat yonu sirasiyla)
-App en distaki gorunmez kutu( turuncu)
+1)margin:10px auto ***yukari asagi ve sag sol 
+2)margin:7px 5px 8px 9px (saat yonunde sirasiyla)
+
 display flex: esnek olmayi saglar yani sayfada ozellikler kullanilarak konumlandirilabilir
 Justify content (icerigi yatay hizala), align items( dikey hizala), flex direction:column (esneklik yonu dikey hizala ) ve gap(satirlar ve
 sutunlar arasi bosluk) gibi ozellikleri alir.
 
 border-radius: sinirlarin keskin veya kavisli olmasini saglar 0 olursa keskin olur.
 
-line height: Satırlar arasındaki yüksekliği belirler.
- border: 10px solid #0000 (solid duz cizgi// dashed dersek kesik cizgi)
+line height: Satır yüksekliğini belirler.
+ border: 10px solid #0000 (solid duz cizgi // dashed -- kesik cizgi)
  height: 100vh veya height:100% ayni 
 
 */
