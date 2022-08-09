@@ -28,7 +28,7 @@ body {
 .game--container {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-gap: 30px;
+  grid-gap: 10px;
   align-items: center;
   justify-content: center;
   justify-items: center;
@@ -42,6 +42,11 @@ body {
   border: 10px solid #000000;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 /*
@@ -62,3 +67,23 @@ line height: Satır yüksekliğini belirler.
  height: 100vh veya height:100% ayni 
 
 */
+
+.x-filled{
+  color: red;
+}
+
+.o-filled {
+  color: blue
+}
+
+.mouse-over-empty {
+  background-color: #8C8C8C;
+}
+
+.mouse-over-filled-x {
+  background-color: red;
+}
+
+.mouse-over-filled-o {
+  background-color: blue;
+}
