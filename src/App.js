@@ -1,10 +1,11 @@
-import GameContainer from "./components/GameContainer";
+import GameContainer from "./components/UI/GameContainer";
+import GameHeader from "./components/UI/GameHeader";
 
 
 function App() {
   return (
     <div className="App">
-      <div className='title'>GAME TIME</div>
+      <GameHeader />
       <GameContainer />
     </div>
   );
