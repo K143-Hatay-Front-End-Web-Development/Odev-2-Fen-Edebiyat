@@ -4,7 +4,7 @@ const CheckMatch = (row1, row2, row3) => {
   let m = [...row3];
   let table = [k, l, m];
 
-
+/* check rows*/
   for (let i = 0; i < table.length; i++) {
     let satir = table[i];
     for (let j = 0; j < satir.length; j++) {
@@ -18,7 +18,7 @@ const CheckMatch = (row1, row2, row3) => {
       }
     }
   }
-
+/*check columns*/
   for (let i = 0; i < table.length; i++) {
     if (
       k[i] === l[i] &&
@@ -29,7 +29,7 @@ const CheckMatch = (row1, row2, row3) => {
         return k[i];
     }
   }
-
+/* check left diagonal algorithms */
   for (let i = 0; i < 3; i++) {
     if (
       k[0] === l[1] &&
@@ -39,7 +39,7 @@ const CheckMatch = (row1, row2, row3) => {
       console.log("1. soldan capraz kosegen oyun biter");
         return k[0];
     }
-  }
+  }/* check right diagonal algorithms */
   for (let i = 0; i < 3; i++) {
     if (
       m[0] === l[1] &&

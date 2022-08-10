@@ -24,7 +24,7 @@ body {
   line-height: 65px;
   color: #0026ED;
 }
-
+/*create table structure*/
 .game--container {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -34,7 +34,7 @@ body {
   justify-items: center;
   align-content: center;
 }
-
+/* create cells style */
 .cell {
   background-color: #FFFFFF;
   width: 80px;
@@ -49,25 +49,6 @@ body {
   color: white;
 }
 
-/*
-
-Notlar: margin: 4 kenardan bosluk birakir.kullanimlari:
-margin:0 (4 kenardan bosluk kalmaz)
-1)margin:10px auto ***yukari asagi ve sag sol 
-2)margin:7px 5px 8px 9px (saat yonunde sirasiyla)
-
-display flex: esnek olmayi saglar yani sayfada ozellikler kullanilarak konumlandirilabilir
-Justify content (icerigi yatay hizala), align items( dikey hizala), flex direction:column (esneklik yonu dikey hizala ) ve gap(satirlar ve
-sutunlar arasi bosluk) gibi ozellikleri alir.
-
-border-radius: sinirlarin keskin veya kavisli olmasini saglar 0 olursa keskin olur.
-
-line height: Satır yüksekliğini belirler.
- border: 10px solid #0000 (solid duz cizgi // dashed -- kesik cizgi)
- height: 100vh veya height:100% ayni 
-
-*/
-
 .x-filled{
   color: red;
 }
@@ -75,7 +56,7 @@ line height: Satır yüksekliğini belirler.
 .o-filled {
   color: blue
 }
-
+/*hover cell*/
 .mouse-over-empty {
   background-color: #8C8C8C;
 }
@@ -87,7 +68,9 @@ line height: Satır yüksekliğini belirler.
 .mouse-over-filled-o {
   background-color: blue;
 }
+/*---*/
 
+/* footer styles*/
 .game-footer {
   height: 10px;
 }
@@ -98,3 +81,5 @@ line height: Satır yüksekliğini belirler.
 .o-wins-footer {
   color: blue;
 }
+/*---*/
+
