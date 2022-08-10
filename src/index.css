@@ -87,3 +87,14 @@ line height: Satır yüksekliğini belirler.
 .mouse-over-filled-o {
   background-color: blue;
 }
+
+.game-footer {
+  height: 10px;
+}
+.x-wins-footer {
+  color: red;
+}
+
+.o-wins-footer {
+  color: blue;
+}
