@@ -1,73 +1,73 @@
-import React, { useEffect, useState } from "react";
-import CheckMatch from "../utils/CheckMatch";
-import GameFooter from "./GameFooter";
+import React, { useEffect, useState } from 'react';
+import CheckMatch from '../utils/CheckMatch';
+import GameFooter from './GameFooter';
 
 const GameContainer = () => {
   const [table, setTable] = useState([]);
-  const [winner, setWinner] = useState();
+  const [winner, setWinner] = useState({ coords: [], name: '' });
 
+  useEffect(() => {
+    /* create an empty table on page load*/
+    setTable([
+      ['', '', ''],
+      ['', '', ''],
+      ['', '', ''],
+    ]);
+  }, []);
 
   /* styling for mouse moments */
-
   const onMouseEnterHandler = (event) => {
-    if (event.target.innerText === "") {
-      event.target.className = "cell mouse-over-empty";
-    } else if (event.target.innerText === "X") {
-      event.target.className = "cell mouse-over-filled-x";
+    if (event.target.innerText === '') {
+      event.target.className = 'cell mouse-over-empty';
+    } else if (event.target.innerText === 'X') {
+      event.target.className = 'cell mouse-over-filled-x';
     }
-    if (event.target.innerText === "O") {
-      event.target.className = "cell mouse-over-filled-o";
+    if (event.target.innerText === 'O') {
+      event.target.className = 'cell mouse-over-filled-o';
     }
   };
   const onMouseLeaveHandler = (event) => {
-    if (event.target.innerText === "") {
-      event.target.className = "cell";
+    if (event.target.innerText === '') {
+      event.target.className = 'cell';
     }
-    if (event.target.innerText === "X") {
-      event.target.className = "cell x-filled";
+    if (event.target.innerText === 'X') {
+      event.target.className = 'cell x-filled';
     }
-    if (event.target.innerText === "O") {
-      event.target.className = "cell o-filled";
+    if (event.target.innerText === 'O') {
+      event.target.className = 'cell o-filled';
     }
   };
   const clickHandler = (event) => {
     const row = event.target.attributes.row.value;
     const col = event.target.attributes.col.value;
-/* logic for filling cells*/ 
+    /* logic for filling cells*/
     const squares = [...table];
-    if (winner !== undefined)
+    if (winner.name !== '') {
       setTable([
-        ["", "", ""],
-        ["", "", ""],
-        ["", "", ""],
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', ''],
       ]);
-
-    else if (event.target.innerText === "")/*if the cell is empty, fill with X*/ {
-      squares[row][col] = "X";
+      setWinner({ coords: [], name: '' });
+      return;
+    } else if (event.target.innerText === '') {
+      /*if the cell is empty, fill with X*/
+      squares[row][col] = 'X';
       setTable(squares);
-      event.target.className = "cell mouse-over-filled-x";
-    } else if (event.target.innerText === "X") {/*if the cell is X, fill with O*/
-      squares[row][col] = "O";
-      console.log(squares)
+      event.target.className = 'cell mouse-over-filled-x';
+    } else if (event.target.innerText === 'X') {
+      /*if the cell is X, fill with O*/
+      squares[row][col] = 'O';
       setTable(squares);
-      event.target.className = "cell mouse-over-filled-o";
-    } else {/*if the cell is O, fill with empty*/
-      squares[row][col] = "";
+      event.target.className = 'cell mouse-over-filled-o';
+    } else {
+      /*if the cell is O, fill with empty*/
+      squares[row][col] = '';
       setTable(squares);
-      event.target.className = "cell mouse-over-empty";
+      event.target.className = 'cell mouse-over-empty';
     }
-    let o = CheckMatch(table[0], table[1], table[2])
-    console.log(o)
     setWinner(CheckMatch(table[0], table[1], table[2]));
   };
-
-  useEffect(() => {/* create an empty table on page load*/
-    setTable([
-      ["", "", ""],
-      ["", "", ""],
-      ["", "", ""],
-    ]);
-  }, []);
 
   return (
     <>
@@ -76,11 +76,22 @@ const GameContainer = () => {
           return x.map((y, j) => {
             return (
               <div
-                key={"row" + i + "col" + j}
+                key={'row' + i + 'col' + j}
                 row={i}
                 col={j}
-                className={"cell"}
-      
+                className={'cell'}
+               // [[0.0],[0.1],[0.2]]
+                style={{
+                  borderColor:
+                    (winner.coords.filter((coord) => btoa(coord) === btoa([i, j]))
+                      .length > 0 &&
+                      winner.name === 'X' &&
+                      'red') ||
+                    (winner.coords.filter((coord) => btoa(coord) === btoa([i, j]))
+                      .length > 0 &&
+                      winner.name === 'O' &&
+                      'blue'),
+                }}
                 onClick={clickHandler}
                 onMouseEnter={onMouseEnterHandler}
                 onMouseLeave={onMouseLeaveHandler}

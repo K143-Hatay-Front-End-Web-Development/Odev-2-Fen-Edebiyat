@@ -1,13 +1,12 @@
 body {
-  margin: 0px;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Finger Paint', cursive;
 }
 
-
 .App {
-  background: #F3B18C;
+  background: #f3b18c;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -22,7 +21,7 @@ body {
 .title {
   font-size: 44px;
   line-height: 65px;
-  color: #0026ED;
+  color: #0026ed;
 }
 /*create table structure*/
 .game--container {
@@ -36,7 +35,7 @@ body {
 }
 /* create cells style */
 .cell {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 80px;
   height: 80px;
   border: 10px solid #000000;
@@ -47,18 +46,19 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+  user-select: none;
 }
 
-.x-filled{
+.x-filled {
   color: red;
 }
 
 .o-filled {
-  color: blue
+  color: blue;
 }
 /*hover cell*/
 .mouse-over-empty {
-  background-color: #8C8C8C;
+  background-color: #8c8c8c;
 }
 
 .mouse-over-filled-x {
@@ -82,4 +82,3 @@ body {
   color: blue;
 }
 /*---*/
-

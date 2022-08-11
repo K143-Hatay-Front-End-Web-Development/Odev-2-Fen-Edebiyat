@@ -6,10 +6,10 @@ const GameFooter = ({ winner }) => {
   if (winner === "X") style = "game-footer x-wins-footer";
   else if (winner === "O") style = "game-footer o-wins-footer";
   else style = "game-footer";
-  
+
   return (
     <div className="game-footer">
-      <div className={style}>{winner && `${winner}  wins!`}</div>
+      <div className={style}>{winner?.name && `${winner?.name}  wins!`}</div>
     </div>
   );
 };
