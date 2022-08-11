@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CheckMatch from '../utils/CheckMatch';
-import GameFooter from './GameFooter';
+
 
 const GameContainer = () => {
   const [table, setTable] = useState([]);
@@ -102,7 +102,7 @@ const GameContainer = () => {
           });
         })}
       </div>
-      <GameFooter winner={winner} />
+
     </>
   );
 };
