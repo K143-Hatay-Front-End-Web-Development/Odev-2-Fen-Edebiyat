@@ -9,8 +9,8 @@
 - [GAME TIME](https://odev-2-fen-edebiyat-qoj3vbh1p-fen-edebiyat.vercel.app/)
   
 ## Project Structure
+![projectstructure](https://user-images.githubusercontent.com/104576153/184122399-3f59a684-99bc-493b-9162-de8ce152703a.png)
 
-![projectstructure](https://user-images.githubusercontent.com/104576153/184119958-8dc3ab63-50b5-4de1-89fe-89ee1b8e154b.png)
 
 ## Scripts
 ### Run on Locale
@@ -28,6 +28,7 @@
 - [Sercan Ateş](https://github.com/atessercan)
 
   
+
 
 
 
